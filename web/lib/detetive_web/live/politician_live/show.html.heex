@@ -1,0 +1,17 @@
+<.header>
+  Politician {@politician.id}
+  <:subtitle>This is a politician record from your database.</:subtitle>
+</.header>
+
+<.list>
+  <:item title="Name">{@politician.name}</:item>
+  <:item title="Gender">{@politician.gender}</:item>
+  <:item title="Social media">{@politician.social_media}</:item>
+  <:item title="Web site">{@politician.web_site}</:item>
+  <:item title="Birth date">{@politician.birth_date}</:item>
+  <:item title="Birth at">{@politician.birth_at}</:item>
+  <:item title="Photo url">{@politician.photo_url}</:item>
+  <:item title="Party">{@politician.party}</:item>
+</.list>
+
+<.back navigate={~p"/politicians"}>Back to politicians</.back>

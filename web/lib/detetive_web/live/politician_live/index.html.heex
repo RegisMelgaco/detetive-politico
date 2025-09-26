@@ -1,0 +1,20 @@
+<.header>
+  Listing Politicians
+</.header>
+
+<.table
+  id="politicians"
+  rows={@streams.politicians}
+  row_click={fn {_id, politician} -> JS.navigate(~p"/politicians/#{politician}") end}
+>
+  <:col :let={{_id, politician}} label="Party">{politician.party}</:col>
+  <:col :let={{_id, politician}} label="Name">{politician.name}</:col>
+  <:col :let={{_id, politician}} label="Gender">{politician.gender}</:col>
+  <:col :let={{_id, politician}} label="Birth at">{politician.birth_at}</:col>
+  <:col :let={{_id, politician}} label="Birth date">{politician.birth_date}</:col>
+  <:action :let={{_id, politician}}>
+    <div class="sr-only">
+      <.link navigate={~p"/politicians/#{politician}"}>Show</.link>
+    </div>
+  </:action>
+</.table>

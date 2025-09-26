@@ -18,6 +18,9 @@ defmodule DetetiveWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :home
+
+    live "/politicians", PoliticianLive.Index, :index
+    live "/politicians/:id", PoliticianLive.Show, :show
   end
 
   # Other scopes may use custom stacks.
